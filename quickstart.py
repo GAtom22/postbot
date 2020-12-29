@@ -6,7 +6,6 @@ def quickstart():
 
     post_bot = PostBot(
         geckodriver_path=r'/home/you/drivers/geckodriver',
-        delay=10,
         username='your_ig_account@email.com',
         password='your_ig_password',
         mysql_host='localhost',

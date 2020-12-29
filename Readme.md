@@ -37,8 +37,9 @@ from postbot import PostBot
     <br># This function makes a post every amount of minutes specified (1 day = 1440 minutes)
     <br>minutes_in_a_day = 1440
     <br>post_bot.start_posting(minutes_in_a_day)
-    
-<br>post_bot.quit()
+
+    <br>post_bot.quit()
+    <br>
 </code></pre>
 
 That's it! The bot will run till all posts have been posted.
