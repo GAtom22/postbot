@@ -1,0 +1,11 @@
+.Python
+__pycache__/
+venv/
+env/
+build/
+dist/
+geckodriver.log
+.idea
+*.egg-info/
+.installed.cfg
+*.egg
