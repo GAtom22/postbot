@@ -5,8 +5,10 @@ setup(
     packages=['postbot'],
     version='0.1.0',
     description='A simple tool to make posts on Instagram programmatically',
-    author='TG',
-    license='MIT',
+    author='Tom G',
+    url='https://github.com/GAtom22/postbot',
+    download_url='https://github.com/GAtom22/postbot/archive/0.1.0.tar.gz',
+    license='GPLv3',
     keywords=(
         "postbot python instagram post automation \
          marketing promotion bot selenium"
@@ -14,4 +16,16 @@ setup(
     install_requires=["selenium>=3.141.0", "mysql-connector-python>=8.0.22"],
     python_requires=">=3, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
     platforms=["win32", "linux", "linux2", "darwin"],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: End Users/Desktop',
+        'Intended Audience :: Developers',
+        'Topic :: Software Development :: Build Tools',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+    ]
 )
