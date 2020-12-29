@@ -1,13 +1,27 @@
 from setuptools import find_packages, setup
+from io import open as io_open
+from os import path
+
+here = path.abspath(path.dirname(__file__))
+
+
+def readall(*args):
+    with io_open(path.join(here, *args), encoding="utf-8") as fp:
+        return fp.read()
+
+
+documentation = readall("Readme.md")
 
 setup(
     name='postbot',
     packages=['postbot'],
-    version='0.1.0',
+    version='0.1.1',
     description='A simple tool to make posts on Instagram programmatically',
+    long_description=documentation,
+    long_description_content_type="text/markdown",
     author='Tom G',
     url='https://github.com/GAtom22/postbot',
-    download_url='https://github.com/GAtom22/postbot/archive/0.1.0.tar.gz',
+    download_url='https://github.com/GAtom22/postbot/archive/0.1.1.tar.gz',
     license='GPLv3',
     keywords=(
         "postbot python instagram post automation \
