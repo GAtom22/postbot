@@ -99,9 +99,35 @@ class PostBot:
             if len(posts) == 0:
                 break
             for post in posts:
-                self.create_post(post[1], post[2])
+                img_path = post[1]
+                caption_txt = post[2]
+                self.create_post(img_path, caption_txt)
                 self.mysql_client.update_to_posted(post[0])
                 time.sleep(post_interval_in_min * 60)
+
+    def create_one_post(self, add_caption_intro: str = ""):
+        """Creates only one post using data from MySQL database"""
+
+        if not self.use_mysql:
+            logging.error("Need MySQL database configuration to use create_one_post() function. Maybe want to use create_post() function.")
+            self.browser.quit()
+            return
+        post = self.mysql_client.get_one_post_data()
+        if post is None:
+            logging.error("Error occurred in MySQL database while trying to retrieve posts")
+            self.browser.quit()
+            return
+        if len(post) == 0:
+            return
+
+        img_path = post[0][1]
+        caption_txt = post[0][2]
+        if add_caption_intro != "":
+            caption_txt = add_caption_intro + post[0][2]
+
+        self.create_post(img_path, caption_txt)
+        self.mysql_client.update_to_posted(post[0][0])
+
 
     def upload_image(self, img_path: str):
         try:

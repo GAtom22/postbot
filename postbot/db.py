@@ -36,6 +36,18 @@ class MySqlClient:
             logging.error("Error while retrieving data from DB: " + format(e))
             return None
 
+    def get_one_post_data(self):
+        """Gets the posts that are pending to be posted ('posted' column => false)"""
+        try:
+            cur = self.db.cursor()
+            cur.execute(
+                "SELECT id, " + self.img_path_col + ", " + self.caption_txt_col + " FROM " + self.table + " WHERE posted = false LIMIT 1")
+            result = cur.fetchall()
+            return result
+        except mysql.connector.Error as e:
+            logging.error("Error while retrieving data from DB: " + format(e))
+            return None
+
     def update_to_posted(self, post_id: int):
         """Updates to posted the corresponding post ('posted' column => true)"""
         try:

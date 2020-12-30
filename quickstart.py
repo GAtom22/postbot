@@ -26,7 +26,11 @@ def quickstart():
     # Make posts every 15 minutes using posts content stored in database
     post_bot.start_posting(15)
 
-    # You can create one post at a time using create_post() function
+    # You can create one post at a time using create_one_post() function
+    # post_bot.create_one_post()
+
+    # Or you can also create one post at a time using create_post() function and passing manually the img_path and caption text.
+    # No need for database in this case.
     # post_bot.create_post("/your/img/path/post_image.jpg", "My first post here\n\n#programming #python #automation")
 
     post_bot.quit()
