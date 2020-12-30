@@ -3,10 +3,12 @@
 
 ---
 
-###Installation
+##Installation
+
 >`pip install postbot` or `pip3 install postbot`
 
-###Description
+##Description
+
 This tool provides capabilities to make posts on instagram according to content stored in a database 
 and a defined time interval.
 

@@ -15,13 +15,13 @@ documentation = readall("Readme.md")
 setup(
     name='postbot',
     packages=['postbot'],
-    version='0.1.1',
+    version='0.1.3',
     description='A simple tool to make posts on Instagram programmatically',
     long_description=documentation,
     long_description_content_type="text/markdown",
     author='Tom G',
     url='https://github.com/GAtom22/postbot',
-    download_url='https://github.com/GAtom22/postbot/archive/0.1.1.tar.gz',
+    download_url='https://github.com/GAtom22/postbot/archive/0.1.3.tar.gz',
     license='GPLv3',
     keywords=(
         "postbot python instagram post automation \
